@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Feature Extractor</title>
+		<link href="https://unpkg.com/wingcss" rel="stylesheet" type="text/css"/>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  </head>
+	 <body>
+		<div class="col-4" id="main">\
+      <h5>Machine Training</h1>
+      <p> Using the webcam, change the background color of your browser window to blue or red, by training your computer to recognize whether your left hand or right hand is raised. Do this by taking a minimum of 15 pictures of each hand raised, while clicking the blue button for the left hand and the red button for the right hand. This creates a dataset. When this is captured, click the "train button" and wait for the dataset to be processed. When this is done, click the "predict button" and the computer will now predict what hand is raised and change the web browser background color accordingly.</p></a>
+			<div id="video">
+				<!-- Video goes here -->
+			</div>
+
+
+			<div id="data">
+				<!-- Buttons to add training images -->
+				<button id="blue">🔵 left side - <span id="blueCount">0</span> images</button>
+				<button id="red">🔴 right side -  <span id="redCount">0</span> images</button>
+
+				<br>
+
+				<button id="train" class='outline'>Train</button>
+
+				<!-- The predict button is hidden until our model  has been trained. -->
+				<button id="predict" class='outline'>Predict</button>
+
+				<br>
+
+				<!-- Shows when our model is ready -->
+
+				<em id="info">Take a minimum of 15 images of each hand raised</em>
+  			</div>
+		</div>
+
+		<!-- Import ml5.js, p5.js and p5.dom.js  -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+		<script src="https://unpkg.com/ml5"></script>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
